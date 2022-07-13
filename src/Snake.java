@@ -2,10 +2,11 @@
 //Usamos Linked List para armazenar o corpo porque podemos adicionar uma célula em O(1).
 //O método Grow será chamado quando ele comer o alimento. Outros métodos são autoexplicativos.
 
+
 import java.util.LinkedList;
 
 public class Snake {
-    provate LinkedList<Cell>
+    private LinkedList<Cell>
     snakePartList = new java.util.LinkedList<>();
     private Cell head;
     public Snake(Cell initPos){
@@ -16,8 +17,19 @@ public class Snake {
 
     public void grow(){ snakePartList.add(head);}
 
-    public void move(Cell nextCell){
-        System.out.println("Going to check for Crash");
+    public void move(Cell nextCell) {
+        System.out.println("Snake is moving to "
+                + nextCell.getRow() + " "
+                + nextCell.getCol());
+        Cell tail = snakePartList().removeLast();
+        tail.setCelltype(Celltype.Empty);
+
+        head = nextCell;
+        head.setCelltype(CellType.SNAKE_NODE);
+        snakePartList.add.First(head);
+    }
+    public boolean checkCrash(Cell nextCell){
+        System.out.println("going to check for Crash");
         for (Cell cell : snakePartList){
             if (cell == nextCell){
                 return true;
