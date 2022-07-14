@@ -1,4 +1,4 @@
-//Aclasse Snake, que contém o corpo e a cabeça.
+//A classe Snake, que contém o corpo e a cabeça.
 //Usamos Linked List para armazenar o corpo porque podemos adicionar uma célula em O(1).
 //O método Grow será chamado quando ele comer o alimento. Outros métodos são autoexplicativos.
 
